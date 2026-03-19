@@ -5,7 +5,11 @@ export interface CaseStudy {
   challenge: string;
   solution: string;
   techTags: string[];
-  links: { label: string; url: string; type: "github" | "demo" | "audit" }[];
+  links: {
+    label: string;
+    url: string;
+    type: "github" | "demo" | "audit" | "website";
+  }[];
 }
 
 export const cases: CaseStudy[] = [
@@ -18,7 +22,13 @@ export const cases: CaseStudy[] = [
     solution:
       "I implemented a Sherlock-audited 'Buyback & Burn' smart contract engine equipped with TWAP (Time-Weighted Average Price) protection. By slicing the massive buybacks into smaller, automated trades executed seamlessly via a Keeper System, the protocol successfully secured its revenue against MEV bots while completely automating manual treasury operations.",
     techTags: ["Solidity", "TWAP", "Keeper Systems", "DeFi"],
-    links: [{ label: "Audit Report", url: "#", type: "audit" }],
+    links: [
+      {
+        label: "Website",
+        url: "https://www.aerostrategy.finance/",
+        type: "website",
+      },
+    ],
   },
   {
     id: "onyx",
@@ -29,7 +39,7 @@ export const cases: CaseStudy[] = [
     solution:
       "I built a custom, real-time indexing engine using Envio HyperIndex. By utilizing dynamic factory listeners, the indexer automatically tracked new token deployments and aggregated raw on-chain trading data into clean OHLCV formats on the fly. This completely eliminated the need to pay for external data providers and bypassed RPC limits entirely.",
     techTags: ["Envio HyperIndex", "TypeScript", "Indexer", "DeFi"],
-    links: [{ label: "GitHub", url: "#", type: "github" }],
+    links: [{ label: "Website", url: "https://onyx.bond/", type: "website" }],
   },
   {
     id: "arx-research",
@@ -40,9 +50,6 @@ export const cases: CaseStudy[] = [
     solution:
       'I authored the ProjectRegistrar smart contract, which serves as the central hub where end-users go to claim their chips. To ensure complete hardware authenticity, the contract manages the project\'s chips by requiring a "Custody Proof" — a unique cryptographic signature generated directly by the physical chip. This strict verification allows users to securely claim ownership of the physical item through a Physically Backed Token (PBT).',
     techTags: ["Solidity", "PBT", "Cryptography", "Hardware Auth"],
-    links: [
-      { label: "GitHub", url: "#", type: "github" },
-      { label: "Live Demo", url: "#", type: "demo" },
-    ],
+    links: [{ label: "Website", url: "https://arx.org/", type: "website" }],
   },
 ];

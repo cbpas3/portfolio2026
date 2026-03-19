@@ -12,6 +12,7 @@ const linkIcons = {
   github: Github,
   demo: Globe,
   audit: ShieldCheck,
+  website: Globe,
 };
 
 export function CaseCardExpanded({

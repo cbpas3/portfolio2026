@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { Expand } from "lucide-react";
 import type { CaseStudy } from "../data/cases";
 
 interface CaseCardProps {
@@ -36,7 +36,7 @@ export function CaseCard({ caseStudy, onExpand }: CaseCardProps) {
           </motion.p>
         </div>
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-stone-100 text-stone-400 transition-all group-hover:bg-cyan-50 group-hover:text-cyan-500 dark:bg-stone-800 dark:text-stone-500 dark:group-hover:bg-cyan-950/50 dark:group-hover:text-cyan-400">
-          <ArrowUpRight size={16} />
+          <Expand size={16} />
         </span>
       </div>
 
