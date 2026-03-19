@@ -46,11 +46,20 @@ export function CaseCardExpanded({
       />
 
       {/* Expanded card */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 lg:p-16">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 lg:p-16" onClick={onClose}>
         <motion.article
+          onClick={(e) => e.stopPropagation()}
           layoutId={`card-${caseStudy.id}`}
-          className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-stone-200 bg-white p-8 shadow-2xl dark:border-stone-800 dark:bg-stone-900 md:p-10"
+          className="relative max-h-[85vh] w-full max-w-2xl overflow-hidden rounded-2xl border border-l-0 border-stone-200 bg-white shadow-2xl dark:border-stone-800 dark:bg-stone-900"
         >
+          {/* Brand color left border */}
+          <div
+            className="absolute inset-y-0 left-0 z-10 w-1"
+            style={{ backgroundColor: caseStudy.brandHex }}
+          />
+
+          <div className="max-h-[85vh] overflow-y-auto p-8 md:p-10">
+
           {/* Close button */}
           <button
             onClick={onClose}
@@ -69,7 +78,8 @@ export function CaseCardExpanded({
           </motion.h2>
           <motion.p
             layoutId={`subtitle-${caseStudy.id}`}
-            className="mt-1 text-base font-medium text-cyan-600 dark:text-cyan-400"
+            className="mt-1 text-base font-medium"
+            style={{ color: caseStudy.tagHex }}
           >
             {caseStudy.subtitle}
           </motion.p>
@@ -112,7 +122,12 @@ export function CaseCardExpanded({
             {caseStudy.techTags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-cyan-700 dark:bg-cyan-950/50 dark:text-cyan-300"
+                className="rounded-full border px-3 py-1 text-xs font-medium"
+                style={{
+                  color: caseStudy.tagHex,
+                  borderColor: `${caseStudy.tagHex}30`,
+                  backgroundColor: `${caseStudy.tagHex}0a`,
+                }}
               >
                 {tag}
               </span>
@@ -145,6 +160,7 @@ export function CaseCardExpanded({
               })}
             </motion.div>
           )}
+          </div>
         </motion.article>
       </div>
     </>

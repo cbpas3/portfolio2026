@@ -5,6 +5,9 @@ export interface CaseStudy {
   challenge: string;
   solution: string;
   techTags: string[];
+  image: string;
+  brandHex: string;
+  tagHex: string;
   links: {
     label: string;
     url: string;
@@ -17,6 +20,9 @@ export const cases: CaseStudy[] = [
     id: "aerostrategy",
     title: "Aerostrategy",
     subtitle: "Securing against MEV sandwich attacks",
+    image: "/cases/aerostrategy.png",
+    brandHex: "#157cd4",
+    tagHex: "#157cd4",
     challenge:
       "Converting protocol revenue (USDC bribes) into protocol liquidity required executing massive market buybacks. However, executing these large trades all at once exposed the treasury to severe price slippage and predatory MEV sandwich attacks, threatening to drain protocol funds.",
     solution:
@@ -34,6 +40,9 @@ export const cases: CaseStudy[] = [
     id: "onyx",
     title: "Onyx",
     subtitle: "Bypassing expensive data providers",
+    image: "/cases/onyx.png",
+    brandHex: "#1d3826",
+    tagHex: "#e7a139",
     challenge:
       "Our decentralized launchpad required real-time OHLCV (Open, High, Low, Close, Volume) charts for newly launched tokens. Relying on standard RPC nodes caused severe rate-limiting bottlenecks, and purchasing this live charting data from enterprise third-party APIs was prohibitively expensive for the team.",
     solution:
@@ -45,6 +54,9 @@ export const cases: CaseStudy[] = [
     id: "arx-research",
     title: "Arx Research Inc.",
     subtitle: "Bridging physical items on-chain",
+    image: "/cases/arx.png",
+    brandHex: "#ff4600",
+    tagHex: "#ff4600",
     challenge:
       "Connecting real-world items to the blockchain requires a secure way for end-users to claim digital ownership of physical goods without relying on easily spoofed databases.",
     solution:

@@ -16,8 +16,11 @@ export function CaseCard({ caseStudy, onExpand }: CaseCardProps) {
       transition={{ type: "spring", stiffness: 300, damping: 25 }}
       className="group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-xl hover:shadow-stone-900/5 dark:border-stone-800 dark:bg-stone-900 dark:hover:shadow-stone-900/30"
     >
-      {/* Subtle top accent line */}
-      <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-cyan-400 via-orange-400 to-cyan-500 opacity-0 transition-opacity group-hover:opacity-100" />
+      {/* Brand color left border */}
+      <div
+        className="absolute inset-y-0 left-0 w-1 rounded-l-2xl"
+        style={{ backgroundColor: caseStudy.brandHex }}
+      />
 
       {/* Header */}
       <div className="mb-4 flex items-start justify-between">
@@ -30,7 +33,8 @@ export function CaseCard({ caseStudy, onExpand }: CaseCardProps) {
           </motion.h3>
           <motion.p
             layoutId={`subtitle-${caseStudy.id}`}
-            className="mt-0.5 text-sm font-medium text-cyan-600 dark:text-cyan-400"
+            className="mt-0.5 text-sm font-medium"
+            style={{ color: caseStudy.tagHex }}
           >
             {caseStudy.subtitle}
           </motion.p>
@@ -53,7 +57,12 @@ export function CaseCard({ caseStudy, onExpand }: CaseCardProps) {
         {caseStudy.techTags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-medium text-cyan-700 dark:bg-cyan-950/50 dark:text-cyan-300"
+            className="rounded-full border px-3 py-1 text-xs font-medium"
+            style={{
+              color: caseStudy.tagHex,
+              borderColor: `${caseStudy.tagHex}30`,
+              backgroundColor: `${caseStudy.tagHex}0a`,
+            }}
           >
             {tag}
           </span>
