@@ -1,0 +1,39 @@
+# Cyan — Freelance Web3 & Full-Stack Developer
+
+> Cyan (cbpas) is a freelance full-stack software developer with 5+ years of experience, specializing in Solidity, EVM ecosystems, DeFi protocols, and modern React/Node.js infrastructure. Available for new projects.
+
+## About
+
+Cyan builds secure smart contracts and scalable web applications. He has shipped production-grade code for DeFi protocols, decentralized launchpads, and hardware authentication systems on EVM-compatible blockchains.
+
+- Email: cbpas3@gmail.com
+- GitHub: https://github.com/cbpas3
+- LinkedIn: https://www.linkedin.com/in/cbpas/
+- Twitter/X: https://x.com/Iam00ffff
+
+## Skills & Specialties
+
+- Smart contract development: Solidity, EVM ecosystems, Hardhat, Foundry
+- DeFi: TWAP mechanics, MEV protection, keeper systems, tokenomics
+- Blockchain indexing: Envio HyperIndex, The Graph
+- Frontend: React, TypeScript, Next.js, TailwindCSS
+- Backend: Node.js, REST APIs, real-time systems
+- Cryptography: PBT (Physically Backed Tokens), hardware authentication, signature verification
+
+## Case Studies
+
+### Aerostrategy — Securing against MEV sandwich attacks
+Built a Sherlock-audited "Buyback & Burn" smart contract engine with TWAP protection, slicing large treasury buybacks into automated smaller trades via a Keeper System. Eliminated MEV bot exposure and automated manual treasury operations.
+Technologies: Solidity, TWAP, Keeper Systems, DeFi
+
+### Onyx — Bypassing expensive data providers
+Built a custom real-time indexing engine using Envio HyperIndex with dynamic factory listeners, aggregating raw on-chain OHLCV trading data for newly launched tokens. Eliminated dependency on expensive enterprise data APIs.
+Technologies: Envio HyperIndex, TypeScript, DeFi
+
+### Arx Research Inc. — Bridging physical items on-chain
+Authored the ProjectRegistrar smart contract for claiming digital ownership of physical goods via Physically Backed Tokens (PBT). Implemented cryptographic "Custody Proof" verification using signatures generated directly by physical chips.
+Technologies: Solidity, PBT, Cryptography, Hardware Authentication
+
+## Availability
+
+Currently available for freelance engagements. Interested in DeFi protocols, smart contract audits, dApp development, and full-stack web projects.
