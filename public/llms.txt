@@ -1,6 +1,6 @@
-# Cyan — Freelance Web3 & Full-Stack Developer
+# Cyan Pascual — Freelance Web3 & Full-Stack Developer
 
-> Cyan (cbpas) is a freelance full-stack software developer with 5+ years of experience, specializing in Solidity, EVM ecosystems, DeFi protocols, and modern React/Node.js infrastructure. Available for new projects.
+> Cyan Pascual (also known as Cyan Erick Pascual, cbpas) is a freelance full-stack software developer with 5+ years of experience, specializing in Solidity, EVM ecosystems, DeFi protocols, and modern React/Node.js infrastructure. Available for new projects.
 
 ## About
 

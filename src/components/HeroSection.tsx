@@ -3,10 +3,11 @@ import { ArrowDown, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia("(max-width: 768px)").matches
+  );
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
-    setIsMobile(mq.matches);
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
@@ -112,7 +113,7 @@ export function HeroSection() {
         >
           Hi, I'm{" "}
           <span className="font-semibold text-stone-700 dark:text-stone-300">
-            Cyan
+            Cyan Pascual
           </span>
           . I'm a full-stack software developer with over 5 years of
           experience, specializing in Solidity, EVM ecosystems, and modern
