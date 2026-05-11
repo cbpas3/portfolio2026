@@ -88,13 +88,6 @@ export function HeroSection() {
         initial="hidden"
         animate="visible"
       >
-        {/* Badge */}
-        <motion.div variants={itemVariants} className="mb-8">
-          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-1.5 text-sm font-medium text-cyan-700 dark:border-cyan-800/50 dark:bg-cyan-950/80 dark:text-cyan-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 dark:bg-cyan-400" />
-            Available for new projects
-          </span>
-        </motion.div>
 
         {/* Headline */}
         <motion.h1
